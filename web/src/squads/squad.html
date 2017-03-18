@@ -1,0 +1,62 @@
+<template>
+
+    <require from="../shared/summary-item-list.html"></require>
+    <require from="../people/persons-grid.html"></require>
+
+    <div if.bind="squad"
+         with.bind="squad"
+         class="container container-content-dark">
+
+         <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-7">
+                        <h4 class="pt-2">${title}</h4>
+                    </div>
+                    <div class="col-5 align-self-center text-right">
+                        <button type="button" class="btn btn-primary py-1 px-3"><i class="fa fa-facebook-f fa-1x"></i></button>
+                        <button type="button" class="btn btn-info py-1 px-2"><i class="fa fa-twitter fa-1x"></i></button>
+                        <button type="button" class="btn btn-secondary py-1 px-2"><i class="fa fa-envelope-o fa-1x"></i></button>
+                        <a route-href="route.bind: 'squad-edit'; params.bind: {id:id}"
+                           class="btn btn-secondary py-1 px-2">
+                            <i class="fa fa-pencil-square-o fa-1x"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <img if.bind="imageUrl" 
+                    src.bind="imageUrl"
+                    alt="squad image"
+                    class="img-fluid" >
+                
+                <div class="row">
+                    <div class="col-md-2 pt-3">
+                        <summary-item-list summary-items.bind="sponsors"></summary-item-list>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="container-content-dark">
+                            <p class="my-2 text-justify">${information}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-2">
+                    <persons-grid persons.bind="persons"></persons-grid>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="pt-2">News</h4>
+                <summary-item-list summary-items.bind="articles"></summary-item-list>
+            </div>
+         </div>
+
+        <!--<div class="row">
+            <div class="col-lg-10">
+                
+            </div>
+            <div class="col-lg-2">
+                
+            </div>
+        </div>-->
+    </div>
+
+</template>

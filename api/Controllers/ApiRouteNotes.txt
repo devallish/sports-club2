@@ -1,0 +1,25 @@
+
+Rules for API.
+Use plural nouns not verbs.
+Use Version No in URL.
+Use DTOs
+And Validate DTOs.
+Use query string for paging, filtering and sorting (might build in sorting - by date).
+
+Clubs Controller.
+GET /api/v1/clubs/home - returns the first club with articles and sponsors as summary items.
+Current thought is not to use below..
+GET /api/v1/clubs/1/articles - returns the articles for the club with the id 1.
+GET /api/v1/clubs/1/sponsors - returns the sponsors for the club with the id 1.
+
+Squads Controller.
+GET /api/v1/squads - returns all squads (as summary)
+GET /api/v1/squads/1/articles - returns the articles for the squad with the id 1.
+GET /api/v1/squads/1/sponsors - returns the sponsors for the squad with the id 1.
+GET /api/v1/squads/1/persons - returns the people for the squad with the id 1.
+
+Articles Controller.
+GET /api/v1/articles/ - returns all articles with default page sizing (as summary)
+GET /api/v1/articles/?filter=title cn 'U15' & page=1 & pageSize=10 - returns articles with title containing 'U15' and page sizing.
+GET /api/v1/articles/12 - returns article with id
+POST /api/v1/articles - send a new article.

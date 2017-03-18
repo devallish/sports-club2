@@ -1,0 +1,14 @@
+<template bindable="alert">
+    <div class="mt-3">
+        <div if.bind="alert"
+            with.bind="alert"
+            class="card card-inverse text-center py-4 rounded-0 ${level==1 ? 'card-success' : 'card-danger'}">
+            
+
+            <h3 if.bind="title" 
+                class="card-text">${title}</h3>
+            <p if.bind="message"
+                class="card-text">${message}</p>
+        </div>
+    </div>
+</template>

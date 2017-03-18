@@ -1,0 +1,24 @@
+<template bindable="person">
+    <div if.bind="person"
+            with.bind="person" 
+            class="card summary-card rounded-0 mb-3">
+        <img if.bind="imageUrl"
+                src.bind="imageUrl" 
+                class="card-img-top img-fluid rounded-0" 
+                alt="image">
+        <div class="card-block rounded-0 py-2 px-3">
+            <h4 if.bind="name"
+                class="card-title mb-2">${name}</h4>
+            <p if.bind="phoneNo"
+                class="card-text mb-0">${phoneNo}</p>
+            <p if.bind="mobileNo"
+                class="card-text mb-0">${mobileNo}</p>
+            <p if.bind="email"
+                class="card-text mb-0">${email}</p>
+        </div>
+        <div if.bind="role" 
+                class="card-footer rounded-0 py-2">
+            <h5 class="card-text rounded-0">${role}</h5>
+        </div>
+    </div>
+<template>

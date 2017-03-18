@@ -1,0 +1,114 @@
+<template>
+    
+    <div class="container container-content pt-2 pb-3">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-1">
+            </div>
+            <div class="col-12 col-lg-10">
+                <div if.bind="squad"
+                    with.bind="squad">
+                    <h2>${editTypeDescription} ID ${id} : ${name}</h2>
+                    <form>
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="title">Title</label>
+                                    <input id="title" class="form-control" value.bind="name">
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <div class="row mx-1 justify-content-between">
+                                        <div class="col-md-auto">
+                                            <label for="image">Photo</label>
+                                        </div>
+                                        <div class="col-md-auto">
+                                            <button class="btn btn-secondary py-1 px-2"><i class="fa fa-file-image-o fa-1x"></i></button>
+                                            <button class="btn btn-secondary py-1 px-2"><i class="fa fa-eye fa-1x"></i></button>
+                                            <button class="btn btn-secondary py-1 px-2"><i class="fa fa-plus fa-1x"></i></button>
+                                            <button class="btn btn-secondary py-1 px-2"><i class="fa fa-minus fa-1x"></i></button>
+                                        </div>
+                                    </div>
+                                    <input class="form-control" id="image" value.bind="imageUrl">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="summary">Summary</label>
+                            <input id="summary" 
+                                    type="text"
+                                    class="form-control"
+                                    value.bind="summary">
+                            </input>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="information">Information</label>
+                            <textarea id="information" 
+                                    type="text"
+                                    class="form-control"
+                                    rows="12" 
+                                    value.bind="information">
+                            </textarea>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <div class="row mx-1 justify-content-between">
+                                        <div class="col-md-auto">
+                                            <label for="persons">People</label>
+                                        </div>
+                                        <div class="col-md-auto">
+                                            <button class="btn btn-secondary py-1 px-2"><i class="fa fa-user fa-1x"></i></button>
+                                            <button class="btn btn-secondary py-1 px-2"><i class="fa fa-plus fa-1x"></i></button>
+                                            <button class="btn btn-secondary py-1 px-2"><i class="fa fa-minus fa-1x"></i></button>
+                                        </div>
+                                    </div>
+                                    <select multiple class="form-control" id="persons">
+                                        <option>Dan Gregory - Pincipal Coach</option>
+                                        <option>Peter Gregory - Coach</option>
+                                        <option>Alex Gregory - Manager</option>
+                                        <option>Dave Gregory - Coach</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <div class="row mx-1 justify-content-between">
+                                        <div class="col-md-auto">
+                                            <label for="sponsors">Sponsors</label>
+                                        </div>
+                                        <div class="col-md-auto">
+                                            <button class="btn btn-secondary py-1 px-2"><i class="fa fa-user fa-1x"></i></button>
+                                            <button class="btn btn-secondary py-1 px-2"><i class="fa fa-plus fa-1x"></i></button>
+                                            <button class="btn btn-secondary py-1 px-2"><i class="fa fa-minus fa-1x"></i></button>
+                                        </div>
+                                    </div>
+                                    <select multiple class="form-control" id="sponsors">
+                                        <option>Smashing Tech</option>
+                                        <option>Hair by John Boy</option>
+                                        <option>Google</option>
+                                        <option>Shark Bait baits</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <button type="submit" 
+                                    class="btn btn-primary"
+                                    click.delegate="save()">Save</button>
+                            <button type="reset" 
+                                    class="btn btn-secondary">Cancel</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="col col-lg-1">
+            </div>
+        </div>
+    </div>
+    
+</template>

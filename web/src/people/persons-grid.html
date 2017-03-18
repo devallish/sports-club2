@@ -1,0 +1,9 @@
+<template bindable="persons"> 
+    <require from="./person-card.html"></require>
+    <div class="row">
+        <div repeat.for="person of persons"
+             class="col-sm-6 col-lg-4">
+            <person-card person.bind="person"></person-card>
+        </div>
+    </div>
+</template>

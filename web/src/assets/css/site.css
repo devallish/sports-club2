@@ -1,0 +1,122 @@
+body{
+    background-color: #202020;
+}
+/*body{
+    background-color: #bc0707;
+}*/
+.container-nav{
+    background-color:#313030;
+}
+
+.container-footer{
+    background-color: #2f2f2f;
+}
+.container-content-dark{
+    background-color: #484747;
+}
+.container-content-dark h4{
+    color: #fffaa0;
+}
+.container-content-dark h3{
+    color: #fffaa0;
+}
+.container-content-dark p{
+    color: #e0dfd9;
+}
+.container-content-dark label{
+    color: #fffaa0;
+}
+
+.container-content{
+    background-color: #e3e3e3;
+}
+.summary-card{
+    /*background-color: #eee;*/
+    background-color: #2f2f2f;
+    border-style: none;
+}
+.summary-card a h4{
+    /*color: black;*/
+    color: #fffaa0;
+}
+.summary-card a p{
+    /*color: black;*/
+    color: #e0dfd9;
+}
+.summary-card:hover{
+    background-color: #d20000;
+}
+.summary-card:hover a{
+    /*color: #2f2f2f;*/
+    text-decoration: none;
+}
+.summary-card:hover img{
+    opacity: 0.85;
+}
+
+.summary-card .card-footer{
+    background-color: #202020;
+}
+.summary-card .card-footer{
+    color: #fffaa0;
+}
+
+/*override bootstrap*/
+.card-footer:last-child{
+    border-radius: 0 !important;
+}
+.card-danger{
+    background-color: #d20000;
+    border-style: none;
+}
+.card-danger h3.card-text {
+    color: white;
+}
+.card-danger p.card-text {
+    color: white;
+}
+.card-success{
+    background-color: green;
+    border-style: none;
+}
+.card-success h3.card-text {
+    color: white;
+}
+.card-success p.card-text {
+    color: white;
+}
+
+.navbar-brand-override{
+    color: #d20000 !important;
+}
+.nav-item:hover{
+    background-color: #d20000;
+}
+.nav-link{
+    color: #fefcd8 !important;
+}
+.nav-link.active{
+    color: yellow !important;
+}
+
+.footer-card{
+    background-color: transparent;
+}
+.footer-card p{
+   color: #e0dfd9;
+}
+.footer-card a{
+    color: #e0dfd9;
+    text-decoration: none;
+}
+.footer-card a:hover{
+    color: #d20000;
+}
+
+.newline-fix{
+    white-space: pre-line;
+}
+.custom-list-scroll-area{
+    overflow-y: auto;
+    height: 200px;
+}
