@@ -1,0 +1,64 @@
+<template>
+
+    <require from="../shared/summary-item-list.html"></require>
+
+    <div if.bind="article"
+         with.bind="article"
+         class="container container-content-dark">
+         <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <h4 class="pt-2">${title}</h4>
+                    </div>
+                    <div class="col-sm-5 py-1 align-self-center text-right">
+                        <button type="button" class="btn btn-primary py-1 px-3"><i class="fa fa-facebook-f fa-1x"></i></button>
+                        <button type="button" class="btn btn-info py-1 px-2"><i class="fa fa-twitter fa-1x"></i></button>
+                        <button type="button" class="btn btn-secondary py-1 px-2"><i class="fa fa-envelope-o fa-1x"></i></button>
+                        <a route-href="route.bind: 'article-edit'; params.bind: {id:id}"
+                           class="btn btn-secondary py-1 px-2">
+                            <i class="fa fa-pencil-square-o fa-1x"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--TODO: padding at the top when no image-->
+                <img if.bind="imageUrl1" 
+                     src.bind="imageUrl1"
+                     alt="news image 1"
+                     class="img-fluid" >
+
+                <p class="newline-fix text-justify pt-2 mb-2" 
+                   if.bind="content1">${content1}</p>
+
+                <img if.bind="imageUrl2" 
+                     src.bind="imageUrl2"
+                     alt="news image 2"
+                     class="img-fluid">
+
+                <p class="newline-fix text-justify pt-2 mb-2" 
+                   if.bind="content2">${content2}</p>
+
+                <img if.bind="imageUrl3" 
+                     src.bind="imageUrl3"
+                     alt="news image 3"
+                     class="img-fluid">
+
+                <p class="newline-fix text-justify pt-2 mb-2" 
+                   if.bind="content3">${content2}</p>
+                
+                <img if.bind="imageUrl4" 
+                     src.bind="imageUrl4"
+                     alt="news image 4"
+                     class="img-fluid">
+
+                <p class="newline-fix text-justify pt-2 mb-2" 
+                   if.bind="content4">${content4}</p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="pt-2">Related News</h4>
+                <summary-item-list summary-items.bind="relatedArticles"></summary-item-list>
+            </div>
+         </div>
+    </div>
+
+</template>

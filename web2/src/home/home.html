@@ -1,0 +1,18 @@
+<template>
+    <require from="../shared/summary-item-grid.html"></require>
+    <require from="../shared/summary-item-list.html"></require>
+    <require from="../shared/alert.html"></require>
+
+    <div class="container container-content-dark">
+        <div class="row">
+            <div class="col-lg-9">
+                <alert alert.bind="alert1"></alert>
+                <alert alert.bind="alert2"></alert>
+                <summary-item-grid summary-items.bind="articles"></summary-grid>
+            </div>
+            <div class="col-lg-3 pt-3">
+                <summary-item-list summary-items.bind="sponsors"></summary-list>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,15 @@
+<template>
+
+    <require from="../shared/summary-item-grid.html"></require>
+
+    <div if.bind="squadGroups"
+         class="container container-content-dark">
+
+         <div repeat.for="squadGroup of squadGroups">
+            <h4 class="pt-2">${squadGroup.name}</h4>
+            <summary-item-grid summary-items.bind="squadGroup.squads"></summary-item-grid>
+         </div>
+         
+    </div>
+
+</template>

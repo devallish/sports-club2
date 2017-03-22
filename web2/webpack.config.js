@@ -9,7 +9,7 @@ module.exports = {
     publicPath: "/dist/",
     filename: "bundle.js"
   },
-
+  devtool: "eval-source-map",
   resolve: {                                  // (3)
     extensions: [".ts", ".js"],
     modules: ["src", "node_modules"].map(x => path.resolve(x)),

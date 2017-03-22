@@ -1,0 +1,107 @@
+$backgroundColour01: #202020;
+$backgroundColour02: #313030;
+$backgroundColour03: #2f2f2f;
+$backgroundColour04: #484747;
+$backgroundColour05: #e3e3e3;
+
+$foregroundColour01: #fffaa0;
+$foregroundColour02: #e0dfd9;
+$foregroundColour03: white;
+$foregroundColour04: #fefcd8;
+
+$attentionColour01: #d20000;
+$attentionColour02: yellow;
+$attentionColour03: green;
+
+body{
+    background-color: $backgroundColour01;
+}
+.container-nav{
+    background-color: $backgroundColour02;
+}
+.container-footer{
+    background-color: $backgroundColour03;
+}
+.container-content-dark{
+    background-color: $backgroundColour04;
+    h4{ color: $foregroundColour01; }
+    h3{ color: $foregroundColour01; }
+    p{ color: $foregroundColour02; }
+    label{ color: $foregroundColour02; }
+}
+
+.container-content{
+    background-color: $backgroundColour05;
+}
+
+.summary-card{
+    /*background-color: #eee;*/
+    background-color: $backgroundColour03;
+    border-style: none;
+    a h4{ color: $foregroundColour01; }
+    a p{ color: $foregroundColour02; }
+}
+
+.summary-card:hover{
+    background-color: $attentionColour01;
+    a{ text-decoration: none; }
+    img{ opacity: 0.85; }
+}
+
+.summary-card .card-footer{
+    background-color: $backgroundColour01;
+    color: $foregroundColour01;
+}
+
+/*override bootstrap*/
+.card-footer:last-child{
+    border-radius: 0 !important;
+}
+.card-danger{
+    background-color: $attentionColour01;
+    border-style: none;
+    h3.card-text{ color: $foregroundColour03; }
+    p.card-text{ color: $foregroundColour03; }
+}
+
+.card-success{
+    background-color: $attentionColour03;
+    border-style: none;
+}
+.card-success h3.card-text {
+    color: $foregroundColour03;
+}
+.card-success p.card-text {
+    color: $foregroundColour03;
+}
+
+.navbar-brand-override{
+    color: $attentionColour01 !important;
+}
+.nav-item:hover{
+    background-color: $attentionColour01;
+}
+.nav-link{
+    color: $foregroundColour04 !important;
+}
+.nav-link.active{
+    color: $attentionColour02 !important;
+}
+
+.footer-card{
+    background-color: transparent;
+    p{ color: $foregroundColour02;}
+    a{
+        color: $foregroundColour02;
+        text-decoration: none;
+    }
+    a:hover{ color: $attentionColour01; }
+}
+
+.newline-fix{
+    white-space: pre-line;
+}
+.custom-list-scroll-area{
+    overflow-y: auto;
+    height: 200px;
+}
